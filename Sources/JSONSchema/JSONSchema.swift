@@ -9,7 +9,7 @@ import Foundation
 
 /// A class that represents a JSON Schema definition.
 public final class JSONSchema: Codable, Sendable {
-    enum SchemaType: String, Codable, Sendable {
+    public enum SchemaType: String, Codable, Sendable {
         case array
         case boolean
         case `enum`
@@ -20,17 +20,17 @@ public final class JSONSchema: Codable, Sendable {
         case string
     }
     
-    let type: SchemaType
-    let description: String?
+    public let type: SchemaType
+    public let description: String?
     
-    let arraySchema: ArraySchema?
-    let booleanSchema: BooleanSchema?
-    let enumSchema: EnumSchema?
-    let integerSchema: IntegerSchema?
-    let nullSchema: NullSchema?
-    let numberSchema: NumberSchema?
-    let objectSchema: ObjectSchema?
-    let stringSchema: StringSchema?
+    public let arraySchema: ArraySchema?
+    public let booleanSchema: BooleanSchema?
+    public let enumSchema: EnumSchema?
+    public let integerSchema: IntegerSchema?
+    public let nullSchema: NullSchema?
+    public let numberSchema: NumberSchema?
+    public let objectSchema: ObjectSchema?
+    public let stringSchema: StringSchema?
     
     init(
         type: SchemaType,
