@@ -32,7 +32,7 @@ public final class JSONSchema: Codable, Sendable {
     public let objectSchema: ObjectSchema?
     public let stringSchema: StringSchema?
     
-    init(
+    public init(
         type: SchemaType,
         description: String? = nil,
         arraySchema: ArraySchema? = nil,
